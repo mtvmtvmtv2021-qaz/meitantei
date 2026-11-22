@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mtvmtvmtv2021-qaz.github.io/meitantei/sitemap.xml

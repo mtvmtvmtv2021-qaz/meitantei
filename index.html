@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>名探偵〇〇｜無料で遊べる推理ミステリーゲーム（ブラウザ・ドット絵探偵ADV）</title>
+<meta name="description" content="登録不要・無料でブラウザから遊べる本格推理ミステリーゲーム。俳優探偵になって証拠を集め、証言の矛盾を見抜き「あなたが犯人だ！」と告発しよう。全8事件＋隠し事件、3人の助手、ドット絵の探偵アドベンチャー。">
+<meta name="keywords" content="ミステリーゲーム,推理ゲーム,探偵ゲーム,無料ゲーム,ブラウザゲーム,謎解き,アドベンチャーゲーム,ドット絵,名探偵,犯人当て">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://mtvmtvmtv2021-qaz.github.io/meitantei/">
+<meta name="theme-color" content="#0d1124">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230d1124'/%3E%3Ccircle cx='7' cy='7' r='4' fill='none' stroke='%23f2c14e' stroke-width='2'/%3E%3Crect x='10' y='10' width='2' height='5' fill='%23f2c14e' transform='rotate(-45 11 12)'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="名探偵〇〇">
+<meta property="og:title" content="名探偵〇〇｜無料で遊べる推理ミステリーゲーム（ブラウザ・ドット絵探偵ADV）">
+<meta property="og:description" content="登録不要・無料でブラウザから遊べる本格推理ミステリーゲーム。俳優探偵になって証拠を集め、証言の矛盾を見抜き「あなたが犯人だ！」と告発しよう。全8事件＋隠し事件、3人の助手、ドット絵の探偵アドベンチャー。">
+<meta property="og:url" content="https://mtvmtvmtv2021-qaz.github.io/meitantei/">
+<meta property="og:image" content="https://mtvmtvmtv2021-qaz.github.io/meitantei/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="名探偵〇〇｜無料で遊べる推理ミステリーゲーム（ブラウザ・ドット絵探偵ADV）">
+<meta name="twitter:description" content="登録不要・無料でブラウザから遊べる本格推理ミステリーゲーム。俳優探偵になって証拠を集め、証言の矛盾を見抜き「あなたが犯人だ！」と告発しよう。全8事件＋隠し事件、3人の助手、ドット絵の探偵アドベンチャー。">
+<meta name="twitter:image" content="https://mtvmtvmtv2021-qaz.github.io/meitantei/ogp.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoGame","name":"名探偵〇〇","alternateName":["名探偵ゲーム","俳優探偵ミステリー"],"url":"https://mtvmtvmtv2021-qaz.github.io/meitantei/","image":"https://mtvmtvmtv2021-qaz.github.io/meitantei/ogp.png","description":"登録不要・無料でブラウザから遊べる本格推理ミステリーゲーム。俳優探偵になって証拠を集め、証言の矛盾を見抜き「あなたが犯人だ！」と告発しよう。全8事件＋隠し事件、3人の助手、ドット絵の探偵アドベンチャー。","inLanguage":"ja","genre":["ミステリー","推理","アドベンチャー"],"gamePlatform":"Webブラウザ","applicationCategory":"Game","operatingSystem":"Windows, macOS, Linux","playMode":"SinglePlayer","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"無料で遊べますか？","acceptedAnswer":{"@type":"Answer","text":"はい。登録もダウンロードも不要で、ブラウザを開くだけで最後まで無料で遊べます。"}},
+{"@type":"Question","name":"どんなミステリーゲームですか？","acceptedAnswer":{"@type":"Answer","text":"俳優が探偵になって事件を解決する、ドット絵の推理アドベンチャーです。現場を調べて証拠を集め、証言の矛盾に証拠を突きつけ、犯人を告発します。"}},
+{"@type":"Question","name":"何件の事件がありますか？","acceptedAnswer":{"@type":"Answer","text":"盗難・誘拐・殺人・コメディ・ホラー・人間ドラマなど全8事件と、条件を満たすと解放される隠し事件があります。"}},
+{"@type":"Question","name":"セーブはできますか？","acceptedAnswer":{"@type":"Answer","text":"オートセーブと3つのセーブ枠があり、ブラウザを閉じても続きから遊べます。"}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="screen">
+  <canvas id="cv" width="384" height="216"></canvas>
+
+  <!-- 探索中のHUD -->
+  <div id="hud">
+    <div class="hl"><span id="hcase"></span><span id="harea"></span></div>
+    <div class="hr"><span id="hrep"></span></div>
+    <div class="hb">
+      <button data-key="inv">I 証拠品</button><button data-key="menu">M メニュー</button><button data-key="consult">C 助手に相談</button><button data-key="accuse" class="acc">F あなたが犯人だ！</button>
+    </div>
+  </div>
+  <div id="phone" title="AIロボット"><canvas width="16" height="16" id="phonecv"></canvas></div>
+  <div id="hint"></div>
+
+  <!-- 立ち絵 -->
+  <div id="stage"><canvas id="pl" width="48" height="56" class="none"></canvas><canvas id="pr" width="48" height="56" class="none"></canvas></div>
+
+  <!-- 会話ウィンドウ -->
+  <div id="dlg"><div id="dname"></div><div id="dtext"></div><div id="dnext">▼</div><div id="choices"></div></div>
+  <div id="getbox"></div>
+
+  <div id="testi"></div>
+  <div id="panel"></div>
+
+  <!-- 演出 -->
+  <div id="darken"></div>
+  <div id="flash"></div>
+  <div id="big"></div>
+  <div id="acc"><div class="bg"></div><canvas id="accme" width="48" height="56"></canvas><div class="word">あなたが犯人だ！！</div><canvas id="accsus" width="48" height="56"></canvas></div>
+  <div id="toast"></div>
+  <div id="credits"></div>
+
+  <!-- タイトル -->
+  <div id="title">
+    <div class="logo"><small>Pixel Mystery Adventure</small><h1 id="tname">名探偵〇〇</h1></div>
+    <div id="tmenu"></div>
+    <div class="tfoot">矢印キー：選ぶ　Z／Enter：決定　※音が出ます</div>
+  </div>
+</div>
+<noscript>このゲームを遊ぶには JavaScript を有効にしてください。</noscript>
+<main id="about">
+  <h1>名探偵〇〇 ― 無料で遊べるブラウザ推理ミステリーゲーム</h1>
+  <p class="lead">登録もダウンロードもいらない、ドット絵の<strong>探偵アドベンチャー（推理ゲーム）</strong>です。主人公は少し名の知れた俳優。撮影現場や仕事先で事件に巻き込まれ、助手と一緒に現場を調べ、証拠を集め、証言の矛盾を見抜いて、最後は「<strong>あなたが犯人だ！</strong>」と犯人を告発します。上の画面で、今すぐ無料で遊べます。</p>
+  <h2>ゲームの特徴</h2>
+  <ul>
+    <li><b>本格的な謎解き</b>：証拠品を集めて組み合わせ、証言の一文一文に証拠を突きつける推理システム。</li>
+    <li><b>3人の助手</b>：毒舌のお笑い芸人、隠し場所を見つける柴犬、分析が得意なAIロボット。選ぶ助手で調査方法と会話が変わります。</li>
+    <li><b>全8事件＋隠し事件</b>：密室の盗難、子役の失踪、テレビ局の殺人、演芸場のコメディ、廃病院のホラー、結婚式の人間ドラマ、雪の足あとトリック、授賞式のすり替え事件。</li>
+    <li><b>難易度を選べる</b>：EASY・NORMAL・HARD。推理ゲーム初心者でも、謎解き上級者でも楽しめます。</li>
+    <li><b>事件ファイル・人物図鑑・ランク評価</b>：時系列やアリバイを自動で整理。事件ごとにS〜Dの評価がつきます。</li>
+  </ul>
+  <h2>収録事件</h2>
+  <ol>
+    <li>第1事件「消えた銀時計」― 山奥の洋館で起きた、密室風の盗難ミステリー</li>
+    <li>第2事件「消えた子役」― 古いホテルでの誘拐ミステリー</li>
+    <li>第3事件「最後の台本」― 閉鎖されたテレビ局での本格殺人ミステリー</li>
+    <li>第4事件「笑う楽屋の幽霊」― 浅草の演芸場のコメディ・ミステリー</li>
+    <li>第5事件「真夜中の霊安室」― 廃病院ロケ地のホラー・ミステリー</li>
+    <li>第6事件「消えた結婚指輪」― 結婚式場の人間ドラマ</li>
+    <li>第7事件「雪原に消えた足あと」― 雪山ロッジの足あとトリック</li>
+    <li>第8事件「授賞式のラストシーン」― 映画祭のすり替え事件</li>
+  </ol>
+  <h2>遊び方・操作方法</h2>
+  <p>矢印キー（WASD）で移動、Z／Enterで調べる・話す、Iで証拠品、Mでメニュー、Cで助手に相談、Fで「あなたが犯人だ！」と告発。PCのブラウザ（Chrome・Edge・Safari・Firefox）で遊べます。</p>
+  <h2>よくある質問</h2>
+  <dl>
+    <dt>無料で遊べますか？</dt><dd>はい。登録・ダウンロード不要で、最後まで無料です。</dd>
+    <dt>セーブはできますか？</dt><dd>オートセーブと3つのセーブ枠があり、ブラウザを閉じても続きから遊べます。</dd>
+    <dt>どのくらいで遊び終わりますか？</dt><dd>1事件あたり20〜40分ほど。全事件で数時間楽しめます。</dd>
+  </dl>
+  <p class="small">ドット絵・音楽・シナリオはすべてオリジナルです。</p>
+</main>
+
+
+<script src="core.js"></script>
+<script src="art.js"></script>
+<script src="audio.js"></script>
+<script src="ui.js"></script>
+<script src="explore.js"></script>
+<script src="trial.js"></script>
+<script src="story.js"></script>
+<script src="case1.js"></script>
+<script src="case2.js"></script>
+<script src="case3.js"></script>
+<script src="case4.js"></script>
+<script src="case5.js"></script>
+<script src="case6.js"></script>
+<script src="case7.js"></script>
+<script src="case8.js"></script>
+<script src="hidden.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
